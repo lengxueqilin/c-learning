@@ -1,0 +1,89 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "① 编译当前文件",
+      "detail": "clang -std=c17 -Wall -Wextra -Wpedantic；产物放到 build/<相对目录>/<文件名>",
+      "type": "shell",
+      "command": "mkdir -p \"${workspaceFolder}/build/${relativeFileDirname}\" && cc -std=c17 -Wall -Wextra -Wpedantic -g -O0 \"${file}\" -o \"${workspaceFolder}/build/${relativeFileDirname}/${fileBasenameNoExtension}\"",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true,
+        "close": false
+      }
+    },
+    {
+      "label": "② 编译并运行当前文件",
+      "detail": "先编译，编译通过后立刻运行；程序里可以正常用 scanf 输入",
+      "type": "shell",
+      "command": "mkdir -p \"${workspaceFolder}/build/${relativeFileDirname}\" && cc -std=c17 -Wall -Wextra -Wpedantic -g -O0 \"${file}\" -o \"${workspaceFolder}/build/${relativeFileDirname}/${fileBasenameNoExtension}\" && \"${workspaceFolder}/build/${relativeFileDirname}/${fileBasenameNoExtension}\"",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true,
+        "focus": true,
+        "close": false
+      }
+    },
+    {
+      "label": "③ 只运行当前文件（不重新编译）",
+      "detail": "直接执行上一次编译出来的可执行文件",
+      "type": "shell",
+      "command": "\"${workspaceFolder}/build/${relativeFileDirname}/${fileBasenameNoExtension}\"",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": true,
+        "close": false
+      }
+    },
+    {
+      "label": "④ 严格模式编译（当成考试批改）",
+      "detail": "额外开启 -Werror：任何警告都当错误，用来检查作业代码是否干净",
+      "type": "shell",
+      "command": "mkdir -p \"${workspaceFolder}/build/${relativeFileDirname}\" && cc -std=c17 -Wall -Wextra -Wpedantic -Werror -Wconversion -g -O0 \"${file}\" -o \"${workspaceFolder}/build/${relativeFileDirname}/${fileBasenameNoExtension}\"",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true,
+        "close": false
+      }
+    },
+    {
+      "label": "⑤ 清理 build 目录",
+      "type": "shell",
+      "command": "rm -rf \"${workspaceFolder}/build\" && mkdir -p \"${workspaceFolder}/build\" && touch \"${workspaceFolder}/build/.gitkeep\"",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true,
+        "close": false
+      }
+    }
+  ]
+}

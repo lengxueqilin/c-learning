@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "调试：当前文件（C/C++ 扩展）",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/${relativeFileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "preLaunchTask": "① 编译当前文件",
+      "setupCommands": [
+        {
+          "description": "让 LLDB 输出更易读",
+          "text": "settings set target.x86-disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "调试：当前文件（CodeLLDB，若已安装 CodeLLDB 扩展）",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/${relativeFileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "terminal": "integrated",
+      "preLaunchTask": "① 编译当前文件"
+    }
+  ]
+}

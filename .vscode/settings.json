@@ -1,0 +1,40 @@
+{
+  "//": "C 语言学习工作区设置 —— 由课程助手生成，可自由修改",
+
+  // 编码与格式：源码统一 UTF-8，缩进 4 空格
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.associations": {
+    "*.h": "c"
+  },
+  "[c]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.rulers": [100],
+  "editor.formatOnSave": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.renderWhitespace": "boundary",
+
+  // IntelliSense：按 C17 标准、clang 编译器解析
+  "C_Cpp.default.cStandard": "c17",
+  "C_Cpp.default.compilerPath": "/usr/bin/clang",
+  "C_Cpp.default.intelliSenseMode": "macos-clang-arm64",
+  "C_Cpp.default.compilerArgs": ["-Wall", "-Wextra", "-Wpedantic"],
+  "C_Cpp.errorSquiggles": "enabled",
+  "C_Cpp.intelliSenseEngine": "default",
+
+  // 终端
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.cwd": "${workspaceFolder}",
+
+  // 让 build/ 里的可执行文件不被资源管理器隐藏，方便对照
+  "files.exclude": {
+    "**/.DS_Store": true
+  }
+}
