@@ -36,24 +36,34 @@ c-learning/
 │   └── extensions.json
 ├── lessons/                 # 课程目录，每课一个文件夹
 │   └── lesson01/
-│       ├── lecture.md       # 讲义
-│       ├── examples/        # 示例代码（可以直接跑、随便改）
-│       └── homework/        # 作业（在这里写你的答案）
-│           ├── README.md    # 本课题目与要求
-│           ├── taskN_*.c    # 你的作业代码
-│           └── questions.md # ★ 我的疑问（不懂就写这里，和作业一起提交）
+│       ├── lesson01-lecture.md      # 讲义
+│       ├── lesson01-errors.md       # 常见报错速查
+│       ├── examples/                # 示例代码（可以直接跑、随便改）
+│       └── homework/                # 作业（在这里写你的答案）
+│           ├── lesson01-homework.md   # 本课题目与要求
+│           ├── taskN_*.c              # 你的作业代码
+│           └── lesson01-questions.md  # ★ 我的疑问（和作业一起提交）
 ├── reports/                 # 批改报告 + 点评
 ├── build/                   # 编译产物（已加入 .gitignore）
 └── .gitignore
 ```
 
-**命名约定**
+**命名约定（每课都带课号前缀，这样文件名不会"重名"）**
 
-- 示例代码：`lessons/lessonNN/examples/NN_主题.c`
-- 作业代码：`lessons/lessonNN/homework/taskN_题目.c`
-- 我的疑问：`lessons/lessonNN/homework/questions.md`
-- 报错速查：`lessons/lessonNN/errors-cheatsheet.md`
-- 批改报告：`reports/lessonNN-review.md`
+| 内容 | 路径 | 说明 |
+| --- | --- | --- |
+| 讲义 | `lessons/lessonNN/lessonNN-lecture.md` | |
+| 报错速查 | `lessons/lessonNN/lessonNN-errors.md` | |
+| 示例代码 | `lessons/lessonNN/examples/NN_主题.c` | 已带 NN 前缀 |
+| 作业题目 | `lessons/lessonNN/homework/lessonNN-homework.md` | |
+| 作业代码 | `lessons/lessonNN/homework/taskN_题目.c` | 题目名各不相同 |
+| 我的疑问 | `lessons/lessonNN/homework/lessonNN-questions.md` | |
+| 批改报告 | `reports/lessonNN-review.md` | |
+
+> **为什么每个文件都带 `lessonNN-` 前缀？**
+> 因为它们分散在不同目录里，但 VSCode 标签页、搜索结果是按**文件名**显示的。
+> 全都叫 `lecture.md` / `README.md` 时，你根本分不清哪个是第几课。
+> 带上课号前缀，一眼就能认出来 —— 这是工程上的通行做法（也适用于你自己的项目）。
 
 ---
 
@@ -118,17 +128,17 @@ cc -std=c17 -Wall -Wextra -Wpedantic -g lessons/lesson01/examples/01_hello.c -o 
 
 ## 五、学习流程约定
 
-1. 我每轮**只讲一课**，交付：讲义（`lecture.md`）、示例代码（`examples/`）、作业（`homework/`）、报错速查（`errors-cheatsheet.md`）。
+1. 我每轮**只讲一课**，交付：讲义（`lessonNN-lecture.md`）、示例代码（`examples/`）、作业（`lessonNN-homework.md`）、报错速查（`lessonNN-errors.md`）。
 2. 交付后**我立即停止**，不会催你、不会轮询你的进度。
-3. **学到不懂的地方**，随时写进 `homework/questions.md`（每课都有一份），和作业一起提交。
+3. **学到不懂的地方**，随时写进 `homework/lessonNN-questions.md`（每课都有一份），和作业一起提交。
 4. 你做完作业，直接说「**批改第 N 课**」即可。
 5. 我批改后输出报告到 `reports/`，含 **得分 + 逐条点评 + 修改建议 + 你的疑问逐条解答**。
 6. **达标**才进入下一课；未达标只针对薄弱点补练，不推进新内容。
 7. 在你提交作业之前，我**不会**给出参考答案，也**不会**准备下一课。
 
-**关于「我的疑问」文件（`questions.md`）**
+**关于「我的疑问」文件（`lessonNN-questions.md`）**
 
-- 位置：每课作业目录下，例如 `lessons/lesson01/homework/questions.md`；
+- 位置：每课作业目录下，例如 `lessons/lesson01/homework/lesson01-questions.md`；
 - 内容：不懂的概念、想不通的写法、对环境的困惑，甚至"我觉得这里很怪"都可以写；
 - 写法：推荐「在哪里 + 我不懂的是 + 我自己猜过 + 想学到什么程度」四段式；
   写了"我自己猜过"，我能更准确地知道你卡在哪一步；

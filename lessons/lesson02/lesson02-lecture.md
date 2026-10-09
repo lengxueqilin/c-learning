@@ -2,7 +2,7 @@
 
 > **本课定位**：让程序**记住**数据、**计算**数据，并且能**听懂你从键盘敲进去**的内容。
 > **预计用时**：30–45 分钟（含动手）
-> **本课交付**：本讲义 + [示例代码](examples/) + [作业](homework/README.md) + [报错速查](errors-cheatsheet.md)
+> **本课交付**：本讲义 + [示例代码](examples/) + [作业](homework/lesson02-homework.md) + [报错速查](lesson02-errors.md)
 > **本课你会跑通 6 个程序，亲手写出 3 个（+1 选做）。**
 
 ---
@@ -219,7 +219,7 @@ scanf("%lf", &d);         /* ✅ 输入：scanf 里读 double 必须写 %lf */
 scanf("%f", &d);          /* ❌ 错误！我实测过：编译有警告，运行时 d 根本没被写进去 */
 ```
 
-我实测的后果（详见 [报错速查](errors-cheatsheet.md) 第三节）：
+我实测的后果（详见 [报错速查](lesson02-errors.md) 第三节）：
 
 ```text
 输入小数：d=0.000000      ← 你输入了 3.14，但 d 还是 0
@@ -461,7 +461,7 @@ printf("%.2f", sum / 3.0);    /* ✅ 85.33 —— 有一个是小数，运算就
 | 5 | `char` 用双引号 | **error**，编译失败 | — |
 | 6 | 把小数塞进 `int` | 警告 `-Wliteral-conversion` | 3.9 变成 3（砍掉，不四舍五入） |
 
-**这 6 条的真实报错原文我都给你抓下来了** 👉 [errors-cheatsheet.md](errors-cheatsheet.md)
+**这 6 条的真实报错原文我都给你抓下来了** 👉 [lesson02-errors.md](lesson02-errors.md)
 
 ---
 
@@ -524,7 +524,7 @@ printf("%.2f\n", x / 2.0);      /* 或 (double)x / y */
 
 ## 9. 本课作业
 
-👉 **题目在 [homework/README.md](homework/README.md)**，一共 **3 道必做 + 1 道选做（算法加练）**。
+👉 **题目在 [homework/lesson02-homework.md](homework/lesson02-homework.md)**，一共 **3 道必做 + 1 道选做（算法加练）**。
 
 | 文件 | 内容 | 难度 |
 | --- | --- | --- |
@@ -534,7 +534,7 @@ printf("%.2f\n", x / 2.0);      /* 或 (double)x / y */
 | [challenge_swap.c](homework/challenge_swap.c) | 交换两个变量的值（算法思维入门） | ⭐⭐⭐⭐ 选做 |
 
 **别忘了新机制**：这一课有任何不懂的地方，随时写进
-👉 [homework/questions.md](homework/questions.md)，和作业一起交给我。
+👉 [homework/lesson02-questions.md](homework/lesson02-questions.md)，和作业一起交给我。
 
 **提交方式**：全部写完后，对我说「**批改第 2 课**」。
 在你提交之前：**我不会给参考答案，也不会准备第 3 课。**

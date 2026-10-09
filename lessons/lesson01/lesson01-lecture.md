@@ -2,7 +2,7 @@
 
 > **本课定位**：从零开始，把一个 C 程序"从源码到运行"的完整链条走通。
 > **预计用时**：30–45 分钟（含动手）
-> **本课交付**：本讲义 + [示例代码](examples/) + [作业](homework/README.md)
+> **本课交付**：本讲义 + [示例代码](examples/) + [作业](homework/lesson01-homework.md)
 > **本课你会亲手跑通 4 个程序，并独立写出 3 个。**
 
 ---
@@ -339,7 +339,7 @@ printf("完成度 100%%\n");
 
 ## 8. 本课作业
 
-👉 **题目在 [homework/README.md](homework/README.md)**，一共 **3 道必做 + 1 道选做（算法加练）**。
+👉 **题目在 [homework/lesson01-homework.md](homework/lesson01-homework.md)**，一共 **3 道必做 + 1 道选做（算法加练）**。
 
 作业文件已经建好，你直接在里面写：
 
@@ -372,7 +372,7 @@ printf("完成度 100%%\n");
 ## 10. 常见报错速查
 
 本课专门配了一份**真实报错原文对照表**（每一条都在你这台机器上实测过）：
-👉 [errors-cheatsheet.md](errors-cheatsheet.md)
+👉 [lesson01-errors.md](lesson01-errors.md)
 
 建议现在**别急着看**，等作业报错时再去查 —— 查过一次，比读十遍记得牢。
 

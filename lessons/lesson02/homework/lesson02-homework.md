@@ -194,7 +194,7 @@ int main(void)
 - [x] `task3_calculator.c` 用 `7 2` 和 `10 4` 各测过一次，除法结果都正确
 - [x] 文件顶部注释都写了（文件名 + 题号 + 日期 + 说明）
 - [x] 全文没有中文标点（引号内和注释里除外）
-- [x] **这一课的疑问已写进 [questions.md](questions.md)**（没有疑问就写"本课无疑问"）
+- [x] **这一课的疑问已写进 [lesson02-questions.md](lesson02-questions.md)**（没有疑问就写"本课无疑问"）
 
 ---
 

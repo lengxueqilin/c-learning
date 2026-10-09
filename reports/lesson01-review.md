@@ -282,13 +282,13 @@ printf("| Progress: [####------]  40%%          |\n");
 
 ## 六、本课新增环节 · 疑问解答
 
-从本课起，每课多一个文件：**`homework/questions.md`（我的疑问）**。
+从本课起，每课多一个文件：**`lessonNN-questions.md`（我的疑问）**。
 
 - 学这一课的过程中，凡是"没听懂 / 想不通 / 觉得奇怪"的地方，**随手写进去**；
 - 做完作业后说「批改第 N 课」，我会在批改报告之后**逐条回答**；
 - 写得越具体（在哪一节、卡在哪一步、你自己怎么猜的），我回答得越准。
 
-第 1 课的疑问文件已经建好，就在这里：[questions.md](../lessons/lesson01/homework/questions.md)
+第 1 课的疑问文件已经建好，就在这里：[lesson01-questions.md](../lessons/lesson01/homework/lesson01-questions.md)
 （第 1 课你暂时**没有提交疑问**，所以本节为空 —— 如果现在想起来有，写进去告诉我即可。）
 
 ---
