@@ -27,13 +27,13 @@ int main(void)
     printf("+--------------------------------------+\n");
     printf("| Name\t  : lengxueqilin               |\n");
     printf("| Lesson  : lesson01                   |\n");
-    printf("| Goal    : 100%%                       |\n");
+    printf("| Goal    : Build strong basics        |\n");
     printf("| Date    : 2026-10-09                 |\n");
     printf("+--------------------------------------+\n");
     printf("| Progress: [####------]  40%%          |\n");
     printf("+--------------------------------------+\n");
 
-    printf("信息卡片\n");
+    printf("本程序输出一张宽度严格为 40 字符的学习信息卡\n");
 
     return 0;
 }

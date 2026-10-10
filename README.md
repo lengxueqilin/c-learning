@@ -44,6 +44,8 @@ c-learning/
 │           ├── taskN_*.c              # 你的作业代码
 │           └── lesson01-questions.md  # ★ 我的疑问（和作业一起提交）
 ├── reports/                 # 批改报告 + 点评
+├── tools/                   # 小工具
+│   └── check-links.py       # 检查全部 md 文件的相对链接是否有效
 ├── build/                   # 编译产物（已加入 .gitignore）
 └── .gitignore
 ```

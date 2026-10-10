@@ -36,6 +36,7 @@ int main(void)
     int number = 0;
     printf("请输入一个三位正整数：");
     scanf("%d", &number);
+    printf("\n");
 
     // 定义 3 个变量存拆位的数据
     int ones, tens, hundreds;

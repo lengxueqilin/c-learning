@@ -25,11 +25,11 @@ int main(void)
     double height = 1.75;
     char grade = 'L';
 
-    printf("+-----------------+\n");
-    printf("|%-8s|%8d|\n", "Age", age);
-    printf("|%-8s|%8.2f|\n", "Height", height);
-    printf("|%-8s|%8c|\n", "Grade", grade);
-    printf("+-----------------+\n");
+    printf("+---------------------+\n");
+    printf("| %-8s | %8d |\n", "Age", age);
+    printf("| %-8s | %8.2f |\n", "Height", height);
+    printf("| %-8s | %8c |\n", "Grade", grade);
+    printf("+---------------------+\n");
 
     return 0;
 }
