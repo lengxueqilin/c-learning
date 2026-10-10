@@ -63,3 +63,4 @@ reports/lessonNN-review.md
 | [lesson01-review.md](lesson01-review.md) | 第 1 课 · 认识 C 与第一个程序 | 97 / 100 | ✅ 优秀 · 达标 |
 | [lesson02-review.md](lesson02-review.md) | 第 2 课 · 变量与数据输入 | 95 / 100 | ✅ 优秀 · 达标 |
 | [lesson03-review.md](lesson03-review.md) | 第 3 课 · 运算符与表达式 | 94 / 100 | ✅ 优秀 · 达标 |
+| [lesson04-review.md](lesson04-review.md) | 第 4 课 · 分支结构 | **97 / 100** | ✅ 优秀 · 达标（目前最高） |
