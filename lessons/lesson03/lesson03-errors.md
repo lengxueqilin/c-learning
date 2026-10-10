@@ -159,6 +159,35 @@ logic_const.c:4:15: note: remove constant to silence this warning
 > 顺带说明：`0 && x`、`1 || x` 这类**用 0/1 常量**的写法 clang **不会**警告 ——
 > 因为 0 和 1 本来就是布尔值的标准写法，一看就是故意的。
 
+### 六之补充：`&` 的优先级**比 `==` 还低**（`-Wparentheses`）
+
+写 `&` 的时候特别容易踩这个坑 —— 因为 `&` 的优先级**低于** `==`：
+
+**真实警告：**
+
+```text
+t.c:2:39: warning: & has lower precedence than ==; == will be evaluated first [-Wparentheses]
+    2 | int main(void) { int x = 2; int r = x & 1 == 0; printf("%d\n", r); return 0; }
+      |                                       ^~~~~~~~
+t.c:2:39: note: place parentheses around the '==' expression to silence this warning
+t.c:2:39: note: place parentheses around the & expression to evaluate it first
+1 warning generated.
+```
+
+**真实运行结果（完全不是你想的意思）：**
+
+```text
+0
+```
+
+| 项目 | 内容 |
+| --- | --- |
+| **你的意图** | 判断 x 是不是偶数，以为等价于 `(x & 1) == 0` |
+| **实际含义** | `x & (1 == 0)` → `x & 0` → **恒等于 0** |
+| **怎么改** | `(x & 1) == 0`；或者干脆用我们课上一直用的 `x % 2 == 0` |
+| **记住** | **`&` `\|` `^` 的优先级都比 `==` 低**，和它们混用时**必须加括号** |
+| **对比** | `&&` `\|\|` 的优先级**也**低于 `==`，但方向一致（`a == b && c == d` 读起来自然），所以不像 `&` 这么坑 |
+
 ---
 
 ## 七、⚠️ 有符号整数溢出（**零警告**，属于未定义行为）
@@ -237,6 +266,7 @@ SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior div0.c:7:31
 | `-Wunused-comparison` | 比较的结果没被使用 | 你是不是想写 `=`？还是忘了用结果？ |
 | `-Wsign-compare` | 有符号 vs 无符号 | 别混着比，负数会被当成巨大正数 |
 | `-Wconstant-logical-operand` | 常量做 `&&` / `\|\|` | 想清楚要逻辑还是按位；用变量代替常量 |
+| `-Wparentheses`（& 与 ==） | `&` 的优先级低于 `==` | 混用时加括号：`(x & 1) == 0` |
 | **结果不对但零警告** | 整数除法 / `=` 混 `==` / 溢出 / 除以零 | 逐个对照本页第二、七、八节 |
 
 ---
